@@ -30,7 +30,8 @@
   --heading-size: 3rem;
   --hero-text-size: 2.5rem;
   --hero-secondary-text-size: 2rem;
-  --heading-padding: 1rem;
+  --heading-padding: 2rem;
+  --content-gap: 80px;
 }
 
 * {
@@ -56,7 +57,7 @@ body {
   font-weight: 700;
   font-variation-settings:
     "wdth" 110;
-  padding: var(--heading-padding);
+  padding: 0 var(--heading-padding);
 }
 
 .code {
@@ -81,6 +82,8 @@ body {
     --heading-size: 1.5rem;
     --hero-text-size: 1.25rem;
     --hero-secondary-text-size: 0.938rem;
+    --heading-padding: 1rem;
+    --content-gap: 60px;
   }
 
   .container {
