@@ -1,0 +1,15 @@
+---
+import PortfolioCard from '../components/PortfolioCard.astro';
+import { getCollection } from 'astro:content';
+import '../styles/portfolio-card.css';
+
+const projects = await getCollection('projects');
+---
+
+<div class="portfolio-cards">
+  {projects.map((project, index) => (
+    <a href={`/projects/${project.slug}`}>
+      <PortfolioCard num={index+1} title={project.data.title} skills={project.data.skills} date={project.data.date} />
+    </a>
+  ))}
+</div>

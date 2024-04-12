@@ -37,6 +37,11 @@
   }
 }
 
+.portfolio-cards a, .portfolio-cards a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media screen and (max-width: 480px) {
   .card {
     padding: 1rem;

@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
-import PortfolioCard from '../components/PortfolioCard.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import '../styles/index.css';
@@ -38,16 +39,12 @@ const location = 'Brooklyn, NY';
 				</div>
 				<div id="portfolio" class="portfolio section">
 					<h2 class="heading">Portfolio</h2>
-					<div class="portfolio-cards">
-						<PortfolioCard num="1" title="Portfolio" skills="Design and web development" date="April 2024" />
-					</div>
+					<Projects />
 				</div>
 				<div id="about" class="about">
 					<h2 class="heading">About</h2>
 				</div>
-				<div id="contact" class="contact">
-					<h2 class="heading">Let's talk</h2>
-				</div>
+				<Contact />
 				<Footer />
 			</div>
 		</div>
