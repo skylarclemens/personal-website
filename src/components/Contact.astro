@@ -1,0 +1,20 @@
+---
+import { getEntry } from "astro:content";
+import '../styles/contact.css';
+
+const text = await getEntry('contact', 'contact');
+---
+
+<div id="contact" class="contact">
+  {text.data.available && (
+    <div class="availability">
+      <div class="dot--open"></div>
+      <span>Available for work</span>
+    </div>
+  )}
+  <h2 class="heading">Let's talk</h2>
+  <div class="info">
+    <span>{text.data.desc}</span>
+    <span>{text.data.desc2} <a class="email-link" href={`mailto:${text.data.email}`}>email</a>.</span>
+  </div>
+</div>

@@ -8,6 +8,7 @@
   flex-direction: column;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: var(--hero-text-size);
+  padding: 0 1rem;
   & .dev {
     font-size: var(--hero-secondary-text-size);
     background: #181818;
@@ -18,6 +19,7 @@
     line-height: 1;
   }
   & .ux {
+    position: relative;
     font-size: var(--hero-secondary-text-size);
     background: #5C3693;
     border: 1px solid #A35CFF;
@@ -34,8 +36,12 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
   height: 100%;
   grid-column: 2 / span 10;
+  padding-top: var(--content-gap);
 }
 
 .dashed-border {
@@ -72,9 +78,37 @@
     radial-gradient(ellipse closest-side, transparent, #212527 100%);
 }
 
+.cursor-container {
+  position: absolute;
+  right: 0;
+  & .memoji-image {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    background: #B9E6FF;
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+    height: 54px;
+    width: 54px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    & img {
+      height: 46px;
+      width: 43px;
+    }
+  }
+}
+
+.footer {
+  padding: 1rem var(--main-spacing);
+  border-top: 2px solid #373B3D;
+}
+
+
 @media screen and (max-width: 480px) {
   .hero {
+    min-height: 150px;
     gap: 0.5rem;
+    padding: 0;
     & .positions {
       font-size: 0.875rem;
     }
@@ -85,6 +119,24 @@
       padding: 0.25rem;
     }
   }
+  .cursor-container {
+    bottom: -24px;
+    right: 36px;
+    .cursor {
+      width: 16px;
+    }
+    & .memoji-image {
+      right: -36px;
+      bottom: -28px;
+      border: 1px solid #FFFFFF;
+      height: 44px;
+      width: 44px;
+      & img {
+        height: 38px;
+        width: 36px;
+      }
+    }
+  }
   .content {
     grid-column: span 4;
   }
@@ -92,4 +144,8 @@
     background-size: 33px 33px;
     height: 80%;
   }
+}
+
+.portfolio-cards {
+  border-top: 2px solid #373B3D;
 }

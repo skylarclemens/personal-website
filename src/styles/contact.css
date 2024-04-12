@@ -1,0 +1,36 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 var(--main-spacing);
+  font-size: var(--font-size);
+
+  & .email-link {
+    text-decoration: underline;
+  }
+}
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  margin: 0 var(--main-spacing);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1;
+
+  & .dot--open {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(116, 232, 87, 0.75);
+    outline: 2px solid rgba(116, 232, 87, 0.25);
+    border-radius: 100%;
+  }
+}

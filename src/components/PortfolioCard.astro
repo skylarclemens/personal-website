@@ -1,0 +1,14 @@
+---
+const { num, title, skills, date } = Astro.props;
+---
+
+<div class="card">
+  <span class="num">{num}</span>
+  <div class="card-info">
+    <h3 class="card-title">{title}</h3>
+    <div class="sub-info">
+      <span>{skills}</span>
+      <span>{date}</span>
+    </div>
+  </div>
+</div>

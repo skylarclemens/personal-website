@@ -1,7 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
 import '../styles/index.css';
+import memoji from '../assets/memoji.png';
+import cursor from '../assets/Cursor.svg';
 
 const position1 = 'Front-end Developer';
 const position2 = 'UI/UX Designer';
@@ -19,11 +25,27 @@ const location = 'Brooklyn, NY';
 					<div class="positions">
 						<span class="code dev">{position1}</span>
 						<span>&</span>
-						<span class="heading ux">{position2}</span>
+						<span class="heading ux">
+							{position2}
+							<div class="cursor-container">
+								<Image class="cursor" src={cursor} alt="cursor" />
+								<div class="memoji-image">
+									<Image src={memoji} alt="Memoji with thumbs up" />
+								</div>
+							</div>
+						</span>
 					</div>
 					<span>based in {location}.</span>
 				</div>
-				<h2 class="heading">Portfolio</h2>
+				<div id="portfolio" class="portfolio section">
+					<h2 class="heading">Portfolio</h2>
+					<Projects />
+				</div>
+				<div id="about" class="about">
+					<h2 class="heading">About</h2>
+				</div>
+				<Contact />
+				<Footer />
 			</div>
 		</div>
 	</main>
