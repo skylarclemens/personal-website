@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
 import { Image } from 'astro:assets';
 import '../styles/index.css';
 import memoji from '../assets/memoji.png';
@@ -34,7 +35,18 @@ const location = 'Brooklyn, NY';
 					</div>
 					<span>based in {location}.</span>
 				</div>
-				<h2 class="heading">Portfolio</h2>
+				<div id="portfolio" class="portfolio section">
+					<h2 class="heading">Portfolio</h2>
+					<div class="portfolio-cards">
+						<PortfolioCard num="1" title="Portfolio" skills="Design and web development" date="April 2024" />
+					</div>
+				</div>
+				<div id="about" class="about">
+					<h2 class="heading">About</h2>
+				</div>
+				<div id="contact" class="contact">
+					<h2 class="heading">Let's talk</h2>
+				</div>
 			</div>
 		</div>
 	</main>

@@ -101,6 +101,7 @@
 
 @media screen and (max-width: 480px) {
   .hero {
+    min-height: 150px;
     gap: 0.5rem;
     padding: 0;
     & .positions {
@@ -138,4 +139,8 @@
     background-size: 33px 33px;
     height: 80%;
   }
+}
+
+.portfolio-cards {
+  border-top: 2px solid #373B3D;
 }
